@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: open5gs-pcf-config
+  labels:
+    epc-mode: pcf
+data:
+  pcf.yaml: |
+    db_uri: mongodb://mongodb-svc-skupper/open5gs
+    # logger:
+    #  file: /var/log/open5gs/pcf.log
+    #  level: info   # fatal|error|warn|info(default)|debug|trace
+
+    global:
+      max:
+        ue: 1024  # The number of UE can be increased depending on memory size.
+    #    peer: 64
+
+    pcf:
+      sbi:
+        server:
+          - dev: eth0
+            advertise: open5gs-pcf-skupper
+            # port: 7777
+        client:
+          # nrf:
+          #   - uri: http://open5gs-nrf
+          scp:
+            - uri: http://open5gs-scp-skupper
+      metrics:
+        server:
+          - address: 0.0.0.0
+            port: 9090
