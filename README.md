@@ -49,15 +49,12 @@ Create a Namespace.
 Install the Skupper router.
 Generate tokens for the Relay.
 
-
-```Console on public cluster
-On the public cluster, we will create a token for the Relay.
-
-Create a Namespace.
-Install the Skupper router.
-Generate tokens for the Relay.
-
-```
+````
+$ oc new-project 5gc-public
+$ skupper init --site-name 5gc-public
+$ skupper token create ~/relay-private-a.yaml
+$ skupper token create ~/relay-private-b.yaml
+````
 
 ## Private A cluster
 
@@ -66,7 +63,7 @@ Generate tokens for the Relay.
 3. Create link to Public Cluster
 
 ````
-$ oc new-project 5g-public-a
+$ oc new-project 5g-private-a
 
 $ skupper init
 
