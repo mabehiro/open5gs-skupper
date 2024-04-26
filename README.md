@@ -35,8 +35,6 @@ here are some prequisits:
 curl https://skupper.io/install.sh | sh
 ````
 
-# Architecture diagram
-
 # Skupper Setup
 To begin, open three terminals, one for each cluster. Ensure that you are operating within the correct cluster context. If you are using a single kubeconfig, remember to switch the context accordingly.
 
