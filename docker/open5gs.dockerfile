@@ -7,7 +7,7 @@ MAINTAINER Motohiro Abe <motohiro@gmail.com>
 
 RUN apt-get update && \
    apt-get -yq dist-upgrade && \
-   apt-get --no-install-recommends -qqy install iproute2 python3-pip python3-setuptools python3-wheel ninja-build build-essential \
+   apt-get --no-install-recommends -qqy install iptables iproute2 python3-pip python3-setuptools python3-wheel ninja-build build-essential \
    flex bison git cmake libsctp-dev libgnutls28-dev libgcrypt-dev libssl-dev libidn11-dev libmongoc-dev libbson-dev libyaml-dev \
    libnghttp2-dev libmicrohttpd-dev libcurl4-gnutls-dev libnghttp2-dev libtins-dev libtalloc-dev meson && \
    git clone --branch v2.7.0 https://github.com/open5gs/open5gs && \
