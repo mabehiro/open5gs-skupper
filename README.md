@@ -1,7 +1,7 @@
 # Introduction
 [Red Hat Service Interconnect](https://www.redhat.com/en/technologies/cloud-computing/service-interconnect) has recently announced the general availability of Red Hat Service Interconnect 1.5. Built upon the upstream [Skupper.io project](https://skupper.io/index.html), it enables secure communication across Kubernetes clusters with no VPNs or special firewall rules.
 
-[Open5GS](https://open5gs.org/) is an open-source project enabling the construction and testing of 5G Core elements. Notably, Open5GC now aligns with 3GPP Release-17 standards.
+[Open5GS](https://open5gs.org/) is an open-source project enabling the construction and testing of 5G Core elements. Notably, Open5GC now aligns with 3GPP Release-17.
 
 In this blog post, I will demonstrate the deployment of Open5GC elements across two OpenShift private clusters. Subsequently, I will utilize a public cluster as a relay cluster via Skupper. This setup will emulate a scenario where two vendors can efficiently conduct interoperability testing without the need for VPNs or complex setups involving multiple organizations and network elements.
 
@@ -9,7 +9,7 @@ Specifically, this blog will explore how Open5GS, including SCP (Service Capabil
 
 # Before We Get Started
 
-Before delving into the deployment process, I'd like to express my gratitude to the various blogs and GitHub repositories that have contributed immensely to my learning journey. Leveraging the insights gleaned from these resources, I successfully built the Open5GS container (version 2.7.0) and crafted the deployment manifest.As a result, you may encounter similarities between my code and those found in these sources. Their contributions have been invaluable, and I'm truly grateful for their shared knowledge and expertise. if i am violoating anyting, pelase let me know.
+Before delving into the deployment process, I'd like to express my gratitude to the various blogs and GitHub repositories that have contributed immensely to my learning journey. Leveraging the insights gleaned from these resources, I successfully built the Open5GS container (version 2.7.0) and crafted the deployment manifest.
 
 * [Kubernetes Open5GS Deployment](https://dev.to/infinitydon/virtual-4g-simulation-using-kubernetes-and-gns3-3b7k?fbclid=IwAR1p99h13a-mCfejanbBQe0H0-jp5grXkn5mWf1WrTHf47UtegB2-UHGGZQ)
 * [Open5Gs and UERANSIM](https://nickvsnetworking.com/my-first-5g-core-open5gs-and-ueransim/)
